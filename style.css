@@ -1,0 +1,113 @@
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at 50% 50% in oklch, oklch(95.28% 0.0220 246.80) 0.0%, oklch(93.98% 0.0284 248.77) 3.2%, oklch(92.30% 0.0371 251.49) 6.5%, oklch(90.26% 0.0475 254.71) 9.7%, oklch(87.91% 0.0588 258.22) 12.9%, oklch(85.30% 0.0705 261.78) 16.1%, oklch(82.48% 0.0819 265.18) 19.4%, oklch(79.37% 0.0934 268.48) 22.6%, oklch(75.87% 0.1067 272.08) 25.8%, oklch(72.07% 0.1205 275.76) 29.0%, oklch(68.11% 0.1337 279.31) 32.3%, oklch(64.10% 0.1451 282.49) 35.5%, oklch(60.18% 0.1535 285.08) 38.7%, oklch(56.38% 0.1579 286.90) 41.9%, oklch(52.45% 0.1592 288.07) 45.2%, oklch(48.48% 0.1579 288.75) 48.4%, oklch(44.56% 0.1548 289.05) 51.6%, oklch(40.81% 0.1503 289.12) 54.8%, oklch(37.34% 0.1451 289.08) 58.1%, oklch(34.24% 0.1397 289.06) 61.3%, oklch(31.46% 0.1329 288.93) 64.5%, oklch(28.95% 0.1248 288.64) 67.7%, oklch(26.64% 0.1159 288.19) 71.0%, oklch(24.49% 0.1065 287.55) 74.2%, oklch(22.45% 0.0970 286.71) 77.4%, oklch(20.47% 0.0877 285.66) 80.6%, oklch(18.52% 0.0774 284.16) 83.9%, oklch(16.62% 0.0662 282.26) 87.1%, oklch(14.87% 0.0549 280.21) 90.3%, oklch(13.30% 0.0443 278.22) 93.5%, oklch(12.00% 0.0354 276.51) 96.8%, oklch(11.02% 0.0289 275.33) 100.0%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;     
+}
+
+.box {
+  width: 80%;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;    
+}
+
+.box p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.center {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player, .computer {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  padding: 30px;
+  min-width: 220px; 
+  background: rgba(245, 245, 245, 0.85); 
+  backdrop-filter: blur(10px); 
+  border-radius: 20px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  border: 1px solid rgba(255, 255, 255, 0.6); 
+  transition: transform 0.3s ease;
+}
+
+.player:hover, .computer:hover {
+  transform: translateY(-5px);
+}
+
+.player p:first-child, .computer p:first-child {
+  font-size: 22px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#playerWinCount, #computerWinCount {
+  font-size: 16px;
+  color: #666;
+  background: rgba(0,0,0,0.05);
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+#playerScore, #aiScore {
+  font-size: 64px;
+  color: #3b82f6; 
+  font-family: 'Impact', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#btn {
+  display: block;
+  margin: 0;
+  width: 300px;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(15px); 
+  border: 2px solid rgba(255, 255, 255, 0.6); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: #ffffff;
+  color: #3b82f6; 
+  transform: translateY(-5px) scale(1.05); 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 40px rgba(59, 130, 246, 0.6);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#btn:active {
+  transform: translateY(2px) scale(0.95); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
